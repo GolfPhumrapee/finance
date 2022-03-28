@@ -1,0 +1,678 @@
+definitions:
+  config.SwaggerInfoResult:
+    properties:
+      code:
+        type: integer
+      message:
+        type: string
+    type: object
+  delete.Delete:
+    properties:
+      config_id:
+        example: "0001"
+        type: string
+      group_id:
+        example: group1
+        type: string
+    type: object
+  deletestatus.DeleteStatus:
+    properties:
+      config_id:
+        example: "0001"
+        type: string
+      group_id:
+        example: group1
+        type: string
+      log_date:
+        example: "2006-01-02"
+        type: string
+      log_time:
+        example: "00:00:00"
+        type: string
+      log_user:
+        example: "66861"
+        type: string
+      node_status:
+        example: 1
+        type: integer
+    type: object
+  insertData.AddInformationRequest:
+    properties:
+      config_id:
+        example: "0001"
+        type: string
+      create_date:
+        example: "2022-01-01"
+        type: string
+      create_time:
+        example: "00:00:00"
+        type: string
+      create_user:
+        example: "66861"
+        type: string
+      group_id:
+        example: group1
+        type: string
+      log_date:
+        example: "2006-01-02"
+        type: string
+      log_status:
+        example: xxxxxxxxxx
+        type: string
+      log_time:
+        example: "00:00:00"
+        type: string
+      log_user:
+        example: "66861"
+        type: string
+      node_desc:
+        example: xxxxxxxxxx
+        type: string
+      node_name_en:
+        example: en
+        type: string
+      node_name_th:
+        example: th
+        type: string
+      node_ref_value:
+        example: xxxxxxxxxx
+        type: string
+      node_ref_value2:
+        example: xxxxxxxxxx
+        type: string
+      node_sort:
+        example: 1
+        type: integer
+      node_status:
+        example: 1
+        type: integer
+      node_url:
+        example: /test/newurl
+        type: string
+    type: object
+  login.LoginRequest:
+    properties:
+      encode:
+        example: c433z2w284c2o3w385v3o3i24474e4b4h4
+        type: string
+    type: object
+  logout.LogoutRequest:
+    properties:
+      log_user_id:
+        example: xxxxxxxxxx
+        type: string
+    type: object
+  models.AlComUserModel:
+    properties:
+      Last_active_ip:
+        type: string
+      access_add:
+        type: string
+      access_audit:
+        type: string
+      access_delete:
+        type: string
+      access_display:
+        type: string
+      access_edit:
+        type: string
+      access_operation:
+        type: string
+      access_payment:
+        type: string
+      access_post:
+        type: string
+      access_quality:
+        type: string
+      access_report:
+        type: string
+      access_super_user:
+        type: string
+      address:
+        type: string
+      applicant_id:
+        type: string
+      date_time_ex:
+        type: string
+      email:
+        type: string
+      last_active_date:
+        type: string
+      last_active_time:
+        type: string
+      last_chande_pwd:
+        type: string
+      last_chande_pwd_time:
+        type: string
+      level_priv:
+        type: string
+      log_date:
+        type: string
+      log_status:
+        type: string
+      log_time:
+        type: string
+      log_user:
+        type: string
+      mobile_no:
+        type: string
+      operate_date:
+        type: string
+      operate_time:
+        type: string
+      operate_user:
+        type: string
+      password:
+        type: string
+      pin_user:
+        type: string
+      pre_name:
+        type: string
+      sur_name:
+        type: string
+      user_id:
+        type: string
+      user_name:
+        type: string
+      user_status:
+        type: integer
+    type: object
+  models.Message:
+    properties:
+      code:
+        type: integer
+      message:
+        type: string
+    type: object
+  refreshTK.LoginRequest:
+    properties:
+      encode:
+        example: c433z2w284c2o3w385v3o3i24474e4b4h4
+        type: string
+      user_id:
+        example: "66866"
+        type: string
+    type: object
+  selectGroup.SelectGroup:
+    properties:
+      group_id:
+        example: group1
+        type: string
+      node_desc:
+        example: XXXXXXXX
+        type: string
+      node_name_en:
+        example: XXXXXXXX
+        type: string
+      node_name_th:
+        example: XXXXXXXX
+        type: string
+      node_ref_value:
+        example: XXXXXXXX
+        type: string
+      node_ref_value2:
+        example: XXXXXXXX
+        type: string
+      node_url:
+        example: XXXXXXXX
+        type: string
+    type: object
+  updateData.UpdateData:
+    properties:
+      config_id:
+        example: "0001"
+        type: string
+      create_date:
+        example: "2022-01-01"
+        type: string
+      create_time:
+        example: "00:00:00"
+        type: string
+      create_user:
+        example: "66861"
+        type: string
+      group_id:
+        example: group1
+        type: string
+      log_date:
+        example: "2006-01-02"
+        type: string
+      log_status:
+        example: newupdate
+        type: string
+      log_time:
+        example: "00:00:00"
+        type: string
+      log_user:
+        example: "66861"
+        type: string
+      node_desc:
+        example: newupdate
+        type: string
+      node_name_en:
+        example: en
+        type: string
+      node_name_th:
+        example: th
+        type: string
+      node_ref_value:
+        example: newupdate
+        type: string
+      node_ref_value2:
+        example: newupdate
+        type: string
+      node_sort:
+        example: 1
+        type: integer
+      node_status:
+        example: 1
+        type: integer
+      node_url:
+        example: /test/newurl
+        type: string
+    type: object
+info:
+  contact: {}
+paths:
+  /Data/DeleteData:
+    post:
+      consumes:
+      - application/json
+      description: testswager
+      parameters:
+      - default: th
+        description: (en, th)
+        in: header
+        name: Accept-Language
+        type: string
+      - description: request body
+        in: body
+        name: request
+        schema:
+          $ref: '#/definitions/delete.Delete'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Message'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Message'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/models.Message'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/models.Message'
+        "410":
+          description: Gone
+          schema:
+            $ref: '#/definitions/models.Message'
+      security:
+      - ApiKeyAuth: []
+      summary: Delete
+      tags:
+      - Data
+  /Data/DeleteStatus:
+    post:
+      consumes:
+      - application/json
+      description: testswager
+      parameters:
+      - default: th
+        description: (en, th)
+        in: header
+        name: Accept-Language
+        type: string
+      - description: request body
+        in: body
+        name: request
+        schema:
+          $ref: '#/definitions/deletestatus.DeleteStatus'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Message'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Message'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/models.Message'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/models.Message'
+        "410":
+          description: Gone
+          schema:
+            $ref: '#/definitions/models.Message'
+      security:
+      - ApiKeyAuth: []
+      summary: DeleteStatus
+      tags:
+      - Data
+  /Data/InsertData:
+    post:
+      consumes:
+      - application/json
+      description: testswager
+      parameters:
+      - default: th
+        description: (en, th)
+        in: header
+        name: Accept-Language
+        type: string
+      - description: request body
+        in: body
+        name: request
+        schema:
+          $ref: '#/definitions/insertData.AddInformationRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Message'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Message'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/models.Message'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/models.Message'
+        "410":
+          description: Gone
+          schema:
+            $ref: '#/definitions/models.Message'
+      security:
+      - ApiKeyAuth: []
+      summary: InsertData
+      tags:
+      - Data
+  /Data/SelectGroup:
+    post:
+      consumes:
+      - application/json
+      description: testswager
+      parameters:
+      - default: th
+        description: (en, th)
+        in: header
+        name: Accept-Language
+        type: string
+      - description: request body
+        in: body
+        name: request
+        schema:
+          $ref: '#/definitions/selectGroup.SelectGroup'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Message'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Message'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/models.Message'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/models.Message'
+        "410":
+          description: Gone
+          schema:
+            $ref: '#/definitions/models.Message'
+      security:
+      - ApiKeyAuth: []
+      summary: SelectGroup
+      tags:
+      - Data
+  /Data/UpDateData:
+    post:
+      consumes:
+      - application/json
+      description: testswager
+      parameters:
+      - default: th
+        description: (en, th)
+        in: header
+        name: Accept-Language
+        type: string
+      - description: request body
+        in: body
+        name: request
+        schema:
+          $ref: '#/definitions/updateData.UpdateData'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Message'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Message'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/models.Message'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/models.Message'
+        "410":
+          description: Gone
+          schema:
+            $ref: '#/definitions/models.Message'
+      security:
+      - ApiKeyAuth: []
+      summary: Update
+      tags:
+      - Data
+  /login/login:
+    post:
+      consumes:
+      - application/json
+      description: testswager
+      parameters:
+      - default: th
+        description: (en, th)
+        in: header
+        name: Accept-Language
+        type: string
+      - description: request body
+        in: body
+        name: request
+        schema:
+          $ref: '#/definitions/login.LoginRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.AlComUserModel'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Message'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/models.Message'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/models.Message'
+        "410":
+          description: Gone
+          schema:
+            $ref: '#/definitions/models.Message'
+      security:
+      - ApiKeyAuth: []
+      summary: login
+      tags:
+      - login&logout
+  /test/logout:
+    post:
+      consumes:
+      - application/json
+      description: testswager
+      parameters:
+      - default: th
+        description: (en, th)
+        in: header
+        name: Accept-Language
+        type: string
+      - description: request body
+        in: body
+        name: request
+        schema:
+          $ref: '#/definitions/logout.LogoutRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Message'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Message'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/models.Message'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/models.Message'
+        "410":
+          description: Gone
+          schema:
+            $ref: '#/definitions/models.Message'
+      security:
+      - ApiKeyAuth: []
+      summary: logout
+      tags:
+      - login&logout
+  /test/refreshTK:
+    post:
+      consumes:
+      - application/json
+      description: testswager
+      parameters:
+      - default: th
+        description: (en, th)
+        in: header
+        name: Accept-Language
+        type: string
+      - description: request body
+        in: body
+        name: request
+        schema:
+          $ref: '#/definitions/refreshTK.LoginRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.AlComUserModel'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Message'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/models.Message'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/models.Message'
+        "410":
+          description: Gone
+          schema:
+            $ref: '#/definitions/models.Message'
+      security:
+      - ApiKeyAuth: []
+      summary: refreshtoken
+      tags:
+      - login&logout
+  /upload/Upload:
+    post:
+      consumes:
+      - application/json
+      description: 'เฉพาะแบบร่างโครงการ สำหรับอัพโหลดไฟล์ หมายเหตุ : บังคับฟิล project_id
+        ทุกครั้ง (ไม่สามารถ required ผ่าน swagger ได้เนื่องจากติดข้อจำกัด)'
+      parameters:
+      - description: (en, th)
+        in: header
+        name: Accept-Language
+        type: string
+      - description: ID โครงการ
+        in: formData
+        name: project_id
+        required: true
+        type: string
+      - description: ID Item งบประมาณ
+        in: formData
+        name: budget_id
+        type: string
+      - description: input file to upload1
+        in: formData
+        name: fileupload[0]
+        type: file
+      - description: input file to upload2
+        in: formData
+        name: fileupload[1]
+        type: file
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/config.SwaggerInfoResult'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/config.SwaggerInfoResult'
+      security:
+      - ApiKeyAuth: []
+      summary: อัพโหลดไฟล์
+      tags:
+      - Data
+securityDefinitions:
+  ApiKeyAuth:
+    in: ใส่ค่า Bearer เว้นวรรคและตามด้วย TOKEN  ex(Bearer ?????????)
+    name: Authorization
+    type: apiKey
+swagger: "2.0"

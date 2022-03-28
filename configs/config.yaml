@@ -1,0 +1,63 @@
+APP:
+  PROJECT_ID: "PRPO"
+  SYSTEM_NAME: "prpo"
+  WEB_BASE_URL: "localhost:8500/"
+  API_BASE_URL: "localhost:8500/api"
+  VERSION: "v1"
+  RELEASE: false
+  PORT: 8500
+
+HTTP_SERVER:
+  READ_TIMEOUT: 5s
+  WRITE_TIMEOUT: 10s
+  IDLE_TIMEOUT: 120s
+
+SWAGGER:
+  TITLE: "Financial"
+  DESCRIPTION: "Financial"
+  VERSION: "v1"
+  HOST: "localhost:8500/api"
+  ENABLE: true
+
+MYSQL:
+  Sql:
+    HOST: "127.0.0.1"
+    PORT: 3306
+    USERNAME: "root"
+    PASSWORD: ""
+    DATABASE_NAME: "mydb"
+    DRIVER_NAME: "mysql"
+  
+key_mypass: "di6'gmr"
+
+JWT:
+  ACCESS:
+    EXPIRE_TIME:
+      DAY: 0
+      HOUR: 0
+      MINUTE: 30
+  REFRESH:
+    EXPIRE_TIME:
+      DAY: 0
+      HOUR: 0
+      MINUTE: 45 
+  PRIVATE_KEY_PATH: "./configs/jwt/private-key.pem"
+  PUBLIC_KEY_PATH: "./configs/jwt/public-key.pem"    
+
+# Minio:
+#   MINIO_ENDPOINT: "dev-storage.ace-energy.co.th"
+#   MINIO_PORT: 9000
+#   MINIO_ACCESSKEY: "XgbTz68QkUZwuDLok7sAT7t6"
+#   MINIO_SECRETKEY: "j3P@Zbgdgbcny9Mtee5PSUG*bour"
+#   MINIO_BUCKET: "testminio"
+#   MINIO_PATH: "test"
+#   useSSL: false
+
+Minio:
+  MINIO_ENDPOINT: "minio-dev.me.co.th:9000" # serverhost
+  MINIO_PORT: 9000 # port
+  MINIO_ACCESSKEY: "golf" # คีย์การเข้าถึงเซิร์ฟเวอร์
+  MINIO_SECRETKEY: "golf53598" # คีย์ลับเซิร์ฟเวอร์
+  MINIO_BUCKET: "my-bucket" # bucket
+  MINIO_PATH: "minio" # path
+  UseSSL: false
