@@ -9,7 +9,10 @@ definitions:
   delete.Delete:
     properties:
       config_id:
-        example: "0001"
+        example: "1"
+        type: string
+      create_user:
+        example: "66861"
         type: string
       group_id:
         example: group1
@@ -18,7 +21,7 @@ definitions:
   deletestatus.DeleteStatus:
     properties:
       config_id:
-        example: "0001"
+        example: "1"
         type: string
       group_id:
         example: group1
@@ -39,7 +42,7 @@ definitions:
   insertData.AddInformationRequest:
     properties:
       config_id:
-        example: "0001"
+        example: "1"
         type: string
       create_date:
         example: "2022-01-01"
@@ -57,7 +60,7 @@ definitions:
         example: "2006-01-02"
         type: string
       log_status:
-        example: xxxxxxxxxx
+        example: a
         type: string
       log_time:
         example: "00:00:00"
@@ -66,7 +69,7 @@ definitions:
         example: "66861"
         type: string
       node_desc:
-        example: xxxxxxxxxx
+        example: desc
         type: string
       node_name_en:
         example: en
@@ -75,10 +78,10 @@ definitions:
         example: th
         type: string
       node_ref_value:
-        example: xxxxxxxxxx
+        example: value1
         type: string
       node_ref_value2:
-        example: xxxxxxxxxx
+        example: value2
         type: string
       node_sort:
         example: 1
@@ -186,10 +189,8 @@ definitions:
     type: object
   refreshTK.LoginRequest:
     properties:
-      encode:
-        example: c433z2w284c2o3w385v3o3i24474e4b4h4
-        type: string
       user_id:
+        description: Encode  string `json:"encode"  example:"c433z2w284c2o3w385v3o3i24474e4b4h4"`
         example: "66866"
         type: string
     type: object
@@ -220,7 +221,7 @@ definitions:
   updateData.UpdateData:
     properties:
       config_id:
-        example: "0001"
+        example: "1"
         type: string
       create_date:
         example: "2022-01-01"
@@ -238,7 +239,7 @@ definitions:
         example: "2006-01-02"
         type: string
       log_status:
-        example: newupdate
+        example: new
         type: string
       log_time:
         example: "00:00:00"
@@ -247,19 +248,19 @@ definitions:
         example: "66861"
         type: string
       node_desc:
-        example: newupdate
+        example: new
         type: string
       node_name_en:
-        example: en
+        example: new
         type: string
       node_name_th:
-        example: th
+        example: new
         type: string
       node_ref_value:
-        example: newupdate
+        example: new
         type: string
       node_ref_value2:
-        example: newupdate
+        example: new
         type: string
       node_sort:
         example: 1

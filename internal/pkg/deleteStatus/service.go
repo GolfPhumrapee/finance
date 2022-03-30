@@ -35,7 +35,7 @@ func (s *service) DeleteStatus(c *context.Context, request *DeleteStatus) error 
 	time := timeNow.Format("15:04:05")
 	if request.Config_id != "" && request.Group_id != "" {
 		ConfComConstModel := models.ConfComConstModel{}
-		err := c.GetTestDatabase().Model(&ConfComConstModel).Where("config_id=? && group_id=?", request.Config_id, request.Group_id).Updates(map[string]interface{}{"node_status": 0, "log_date": date, "log_time": time, "log_user": request.Log_user}).Error
+		err := c.GetTestDatabase().Model(&ConfComConstModel).Where("config_id=? && group_id=?", request.Config_id, request.Group_id).Updates(map[string]interface{}{"node_status": 0, "log_date": date, "log_time": time, "log_user": c.GetEmployeeID()}).Error
 		if err != nil {
 			logrus.Errorf("[Delete] delete error: %s", err)
 			return err

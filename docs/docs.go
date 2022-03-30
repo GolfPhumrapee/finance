@@ -653,7 +653,11 @@ const docTemplate = `{
             "properties": {
                 "config_id": {
                     "type": "string",
-                    "example": "0001"
+                    "example": "1"
+                },
+                "create_user": {
+                    "type": "string",
+                    "example": "66861"
                 },
                 "group_id": {
                     "type": "string",
@@ -666,7 +670,7 @@ const docTemplate = `{
             "properties": {
                 "config_id": {
                     "type": "string",
-                    "example": "0001"
+                    "example": "1"
                 },
                 "group_id": {
                     "type": "string",
@@ -695,7 +699,7 @@ const docTemplate = `{
             "properties": {
                 "config_id": {
                     "type": "string",
-                    "example": "0001"
+                    "example": "1"
                 },
                 "create_date": {
                     "type": "string",
@@ -719,7 +723,7 @@ const docTemplate = `{
                 },
                 "log_status": {
                     "type": "string",
-                    "example": "xxxxxxxxxx"
+                    "example": "a"
                 },
                 "log_time": {
                     "type": "string",
@@ -731,7 +735,7 @@ const docTemplate = `{
                 },
                 "node_desc": {
                     "type": "string",
-                    "example": "xxxxxxxxxx"
+                    "example": "desc"
                 },
                 "node_name_en": {
                     "type": "string",
@@ -743,11 +747,11 @@ const docTemplate = `{
                 },
                 "node_ref_value": {
                     "type": "string",
-                    "example": "xxxxxxxxxx"
+                    "example": "value1"
                 },
                 "node_ref_value2": {
                     "type": "string",
-                    "example": "xxxxxxxxxx"
+                    "example": "value2"
                 },
                 "node_sort": {
                     "type": "integer",
@@ -908,11 +912,8 @@ const docTemplate = `{
         "refreshTK.LoginRequest": {
             "type": "object",
             "properties": {
-                "encode": {
-                    "type": "string",
-                    "example": "c433z2w284c2o3w385v3o3i24474e4b4h4"
-                },
                 "user_id": {
+                    "description": "Encode  string ` + "`" + `json:\"encode\"  example:\"c433z2w284c2o3w385v3o3i24474e4b4h4\"` + "`" + `",
                     "type": "string",
                     "example": "66866"
                 }
@@ -956,7 +957,7 @@ const docTemplate = `{
             "properties": {
                 "config_id": {
                     "type": "string",
-                    "example": "0001"
+                    "example": "1"
                 },
                 "create_date": {
                     "type": "string",
@@ -980,7 +981,7 @@ const docTemplate = `{
                 },
                 "log_status": {
                     "type": "string",
-                    "example": "newupdate"
+                    "example": "new"
                 },
                 "log_time": {
                     "type": "string",
@@ -992,23 +993,23 @@ const docTemplate = `{
                 },
                 "node_desc": {
                     "type": "string",
-                    "example": "newupdate"
+                    "example": "new"
                 },
                 "node_name_en": {
                     "type": "string",
-                    "example": "en"
+                    "example": "new"
                 },
                 "node_name_th": {
                     "type": "string",
-                    "example": "th"
+                    "example": "new"
                 },
                 "node_ref_value": {
                     "type": "string",
-                    "example": "newupdate"
+                    "example": "new"
                 },
                 "node_ref_value2": {
                     "type": "string",
-                    "example": "newupdate"
+                    "example": "new"
                 },
                 "node_sort": {
                     "type": "integer",

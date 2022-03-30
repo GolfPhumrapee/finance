@@ -36,8 +36,8 @@ func (s *service) InsertData(c *context.Context, request *AddInformationRequest)
 	userLog := &models.ConfComConstModel{
 		Config_id:       request.Config_id,
 		Group_id:        request.Group_id,
-		Create_date:     request.Create_date,
-		Create_time:     request.Create_time,
+		Create_date:     date,
+		Create_time:     time,
 		Create_user:     request.Create_user,
 		Node_name_th:    request.Node_name_th,
 		Node_name_en:    request.Node_name_en,

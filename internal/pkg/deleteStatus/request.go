@@ -1,7 +1,7 @@
 package deletestatus
 
 type DeleteStatus struct {
-	Config_id   string `json:"config_id"  example:"0001"`
+	Config_id   string `json:"config_id"  example:"1"`
 	Group_id    string `json:"group_id"  example:"group1"`
 	Node_status int    `json:"node_status"  example:"1"`
 	Log_date    string `json:"log_date"  example:"2006-01-02"`

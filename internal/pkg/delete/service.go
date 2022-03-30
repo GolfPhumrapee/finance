@@ -30,11 +30,12 @@ func NewService() Service {
 
 func (s *service) Delete(c *context.Context, request *Delete) error {
 	userLog := &models.ConfComConstModel{
-		Config_id: request.Config_id,
-		Group_id:  request.Group_id,
+		Config_id:   request.Config_id,
+		Group_id:    request.Group_id,
+		Create_user: request.Create_user,
 	}
 	if request.Config_id != "" && request.Group_id != "" {
-		err := s.libSQL.Delete(c.GetTestDatabase().Debug().Where("create_user=?", request.Config_id), userLog)
+		err := s.libSQL.Delete(c.GetTestDatabase().Debug().Where("config_id=? && group_id=? && create_user=?", request.Config_id, request.Group_id, request.Create_user), userLog)
 		if err != nil {
 			logrus.Errorf("[delete] create log delete error: %s", err)
 			return err
