@@ -45,6 +45,22 @@ func (s *service) Update(c *context.Context, request *UpdateData) error {
 
 }
 
+// func (s *service) Update(c *context.Context, request *UpdateData) error {
+// 	timeNow := utils.TimeNowLocationTH()
+// 	date := timeNow.Format("2006-01-02")
+// 	time := timeNow.Format("15:04:05")
+// 	if request.Create_user != "" && request.Group_id != "" {
+// 		ConfComConstModel := models.ConfComConstModel{}
+// 		err := c.GetTestDatabase().Model(&ConfComConstModel).Where("create_user=? && group_id=?", request.Create_user, request.Group_id).Updates(map[string]interface{}{"create_date": date, "create_time": time, "create_user": request.Create_user, "node_name_th": request.Node_name_th, "node_name_en": request.Node_name_en, "node_desc": request.Node_desc, "node_url": request.Node_url, "node_ref_value": request.Node_ref_value, "node_ref_value2": request.Node_ref_value2, "node_sort": request.Node_sort, "node_status": request.Node_status, "log_status": request.Log_status, "log_date": date, "log_time": time, "log_user": c.GetEmployeeID()}).Error
+// 		if err != nil {
+// 			logrus.Errorf("[Update] Update error: %s", err)
+// 			return err
+// 		}
+// 	}
+// 	return nil
+
+// }
+
 // update all
 // 	timeNow := utils.TimeNowLocationTH()
 // 	date := timeNow.Format("2006-01-02")

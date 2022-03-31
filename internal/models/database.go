@@ -99,3 +99,7 @@ func (AlLogConnectModel) TableName() string {
 func (ConfComConstModel) TableName() string {
 	return "conf_com_const"
 }
+
+// func (ConfComConstModel) TableName() string {
+// 	return "test_conf_com_const"
+// }
