@@ -52,9 +52,25 @@ func (s *service) InsertData(c *context.Context, request *AddInformationRequest)
 		Log_time:        time,
 		Log_user:        request.Log_user,
 	}
+	status := &models.AlLogConnectModel{
+		Log_type:    "insert",
+		Log_ip:      utils.GetIpAddress(),
+		Log_level:   c.GetPermissions(),
+		Log_user_id: c.GetEmployeeID(),
+		Log_status:  "a",
+		Log_date:    date,
+		Log_time:    time,
+	}
 	// utils.PrintFormatJSON(userLog)
 	if request.Create_user != "" && request.Node_status == 1 {
 		err := s.libSQL.Create(c.GetTestDatabase(), userLog)
+		if err != nil {
+			logrus.Errorf("[insert] insert error: %s", err)
+			return err
+		}
+	}
+	if request.Create_user != "" && request.Node_status == 1 {
+		err := s.libSQL.Create(c.GetTestDatabase(), status)
 		if err != nil {
 			logrus.Errorf("[insert] insert error: %s", err)
 			return err
